@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes II - Contactos</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--primary-color:#2563eb;--secondary-color:#1e40af;--accent-color:#3b82f6;--text-color:#1f2937;--text-light:#6b7280;--bg-color:#fff;--bg-light:#f9fafb;--bg-dark:#111827;--border-color:#e5e7eb;--shadow:0 4px 6px -1px rgba(0,0,0,0.1);--shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1)}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--bg-light)}
+        .container{max-width:1100px;margin:0 auto;padding:0 20px}
+        .navbar{background-color:#fff;box-shadow:var(--shadow);padding:1rem 0;position:sticky;top:0;z-index:1000}
+        .navbar .container{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+        .logo h2{color:var(--primary-color);font-size:1.8rem}
+        .nav-menu{display:flex;list-style:none;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+        .nav-link{text-decoration:none;color:var(--text-color);font-weight:500;transition:color .3s ease;position:relative}
+        .nav-link:hover{color:var(--primary-color)}
+        .page-header{padding:70px 0;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;text-align:center}
+        .page-header h1{font-size:3rem;margin-bottom:1rem}
+        .page-header p{max-width:720px;margin:0 auto;opacity:.9;font-size:1.05rem}
+        .contact-section{margin:60px 0}
+        .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+        .contact-card{background-color:#fff;padding:2.5rem;border-radius:12px;box-shadow:var(--shadow)}
+        .contact-card h3{color:var(--primary-color);margin-bottom:1rem}
+        .contact-info{display:flex;flex-direction:column;gap:1.2rem;margin-top:1.5rem}
+        .contact-item{display:flex;gap:1rem;align-items:flex-start}
+        .contact-icon{font-size:1.6rem;min-width:36px}
+        .contact-item h4{color:var(--text-color);margin-bottom:.3rem}
+        .contact-item p{color:var(--text-light)}
+        .contact-form{display:flex;flex-direction:column;gap:1.1rem;margin-top:1.5rem}
+        .contact-form label{font-weight:600;color:var(--text-color)}
+        .contact-form input,.contact-form textarea{width:100%;padding:.8rem;border:1px solid var(--border-color);border-radius:6px;font-size:1rem;font-family:inherit;background-color:#fff}
+        .contact-form textarea{resize:vertical;min-height:140px}
+        .btn-primary{align-self:flex-start;background-color:var(--primary-color);color:#fff;padding:12px 28px;text-decoration:none;border-radius:6px;font-weight:600;border:none;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+        .map-card{background-color:#fff;padding:2.5rem;border-radius:12px;box-shadow:var(--shadow)}
+        .map-card iframe{width:100%;border:0;border-radius:10px;height:260px}
+        .page-links{margin:60px 0;background-color:#fff;padding:3rem;border-radius:14px;box-shadow:var(--shadow)}
+        .page-links h2{text-align:center;color:var(--text-color);font-size:2.2rem;margin-bottom:2.5rem}
+        .page-link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+        .page-link{display:block;text-decoration:none;background-color:var(--bg-light);padding:1.4rem;border-radius:10px;box-shadow:var(--shadow);border:1px solid var(--border-color);color:var(--text-color);font-weight:600;text-align:center;transition:transform .3s ease,box-shadow .3s ease}
+        .page-link span{display:block;font-size:.9rem;color:var(--text-light);font-weight:400;margin-top:.4rem}
+        .page-link:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);color:var(--primary-color)}
+        .footer{background-color:var(--bg-dark);color:#fff;text-align:center;padding:2rem 0;margin-top:4rem}
+        .footer p{margin:.5rem 0;opacity:.9}
+        @media(max-width:768px){.page-header{padding:50px 0}.page-header h1{font-size:2.2rem}}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><h2>Redes II</h2></div>
+            <ul class="nav-menu">
+                <li><a href="inicio.html" class="nav-link">Inicio</a></li>
+                <li><a href="productos.html" class="nav-link">Productos</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="informacion-tecnica.html" class="nav-link">Información Técnica</a></li>
+                <li><a href="contactos.html" class="nav-link">Contactos</a></li>
+                <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Hablemos sobre tu proyecto</h1>
+            <p>Completá el formulario o utilizá los medios de contacto directo. Nuestro equipo responderá a la brevedad para brindarte una propuesta personalizada.</p>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Datos de contacto</h3>
+                    <p>Estamos disponibles para asesorarte en la implementación, expansión o mantenimiento de tu red.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contacto@redesll.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h4>Teléfono / WhatsApp</h4>
+                                <p>+54 (11) 1234-5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Buenos Aires, Argentina</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div>
+                                <h4>Horario de atención</h4>
+                                <p>Lunes a Viernes de 9:00 a 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Envíanos un mensaje</h3>
+                    <form class="contact-form" action="#" method="post">
+                        <div>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" required>
+                        </div>
+                        <div>
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-card" style="margin-top:2.5rem;">
+                <h3>Estamos cerca tuyo</h3>
+                <p style="color:var(--text-light);margin-bottom:1rem">Coordiná una visita a nuestras oficinas o solicitá un encuentro virtual.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.975601692174!2d-58.38162032354197!3d-34.603738857393926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacf4ff4fd4b%3A0x9f0f60cbaa12ac4!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-links">
+        <div class="container">
+            <h2>Visitá nuestras otras páginas</h2>
+            <div class="page-link-grid">
+                <a class="page-link" href="inicio.html">Inicio <span>Conoce la propuesta general</span></a>
+                <a class="page-link" href="productos.html">Productos <span>Equipos disponibles</span></a>
+                <a class="page-link" href="servicios.html">Servicios <span>Soluciones profesionales</span></a>
+                <a class="page-link" href="informacion-tecnica.html">Información Técnica <span>Detalles y teoría</span></a>
+                <a class="page-link" href="quienes-somos.html">Quiénes Somos <span>El equipo de Redes II</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Redes II. Todos los derechos reservados.</p>
+            <p>Soluciones profesionales en redes informáticas</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes II - Productos</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--primary-color:#2563eb;--secondary-color:#1e40af;--accent-color:#3b82f6;--text-color:#1f2937;--text-light:#6b7280;--bg-color:#fff;--bg-light:#f9fafb;--bg-dark:#111827;--border-color:#e5e7eb;--shadow:0 4px 6px -1px rgba(0,0,0,0.1);--shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1)}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--bg-color)}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        .navbar{background-color:var(--bg-color);box-shadow:var(--shadow);padding:1rem 0;position:sticky;top:0;z-index:1000}
+        .navbar .container{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+        .logo h2{color:var(--primary-color);font-size:1.8rem}
+        .nav-menu{display:flex;list-style:none;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+        .nav-link{text-decoration:none;color:var(--text-color);font-weight:500;transition:color .3s ease;position:relative}
+        .nav-link:hover{color:var(--primary-color)}
+        .page-header{padding:80px 0;text-align:center;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff}
+        .page-header h1{font-size:3rem;margin-bottom:1rem}
+        .page-header p{opacity:.9;font-size:1.1rem;max-width:700px;margin:0 auto}
+        .products-section{padding:80px 0}
+        .section-title{text-align:center;font-size:2.5rem;margin-bottom:3rem;color:var(--text-color);position:relative}
+        .section-title::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:80px;height:4px;background-color:var(--primary-color);border-radius:2px}
+        .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem}
+        .product-card{background-color:var(--bg-color);border-radius:12px;padding:2rem;box-shadow:var(--shadow);border:1px solid var(--border-color);display:flex;flex-direction:column;gap:1rem}
+        .product-icon{font-size:2.5rem}
+        .product-card h3{color:var(--primary-color);font-size:1.4rem}
+        .product-card ul{list-style:none}
+        .product-card li{color:var(--text-light);padding:.4rem 0;padding-left:1.3rem;position:relative}
+        .product-card li::before{content:'•';position:absolute;left:0;color:var(--accent-color);font-size:1.2rem;line-height:1}
+        .cta-panel{margin-top:4rem;background-color:var(--bg-light);padding:3rem;border-radius:12px;text-align:center;box-shadow:var(--shadow)}
+        .page-links{background-color:var(--bg-light);padding:70px 0;margin-top:60px}
+        .page-links h2{text-align:center;color:var(--text-color);font-size:2.2rem;margin-bottom:2.5rem}
+        .page-link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+        .page-link{display:block;text-decoration:none;background-color:#fff;padding:1.4rem;border-radius:10px;box-shadow:var(--shadow);border:1px solid var(--border-color);color:var(--text-color);font-weight:600;text-align:center;transition:transform .3s ease,box-shadow .3s ease}
+        .page-link span{display:block;font-size:.9rem;color:var(--text-light);font-weight:400;margin-top:.4rem}
+        .page-link:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);color:var(--primary-color)}
+        .btn-primary{display:inline-block;background-color:var(--primary-color);color:#fff;padding:12px 28px;text-decoration:none;border-radius:6px;font-weight:600;transition:transform .3s ease,box-shadow .3s ease}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+        .footer{background-color:var(--bg-dark);color:#fff;text-align:center;padding:2rem 0;margin-top:4rem}
+        .footer p{margin:.5rem 0;opacity:.9}
+        @media(max-width:768px){.page-header{padding:60px 0}.page-header h1{font-size:2.2rem}}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><h2>Redes II</h2></div>
+            <ul class="nav-menu">
+                <li><a href="inicio.html" class="nav-link">Inicio</a></li>
+                <li><a href="productos.html" class="nav-link">Productos</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="informacion-tecnica.html" class="nav-link">Información Técnica</a></li>
+                <li><a href="contactos.html" class="nav-link">Contactos</a></li>
+                <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Nuestros Productos</h1>
+            <p>Equipamos tu red con hardware y software de alto rendimiento, garantizando estabilidad, seguridad y escalabilidad para cualquier entorno.</p>
+        </div>
+    </header>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Catálogo Destacado</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🔌</div>
+                    <h3>Equipos de Red</h3>
+                    <ul>
+                        <li>Routers empresariales y domésticos</li>
+                        <li>Switches gestionados y no gestionados</li>
+                        <li>Hubs inteligentes para redes pequeñas</li>
+                        <li>Access Points de alta densidad</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">📡</div>
+                    <h3>Cableado y Conectividad</h3>
+                    <ul>
+                        <li>Cables UTP Cat5e, Cat6, Cat6A</li>
+                        <li>Cables coaxiales RG-6 y RG-11</li>
+                        <li>Fibra óptica monomodo y multimodo</li>
+                        <li>Patch cords y paneles de parcheo</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🛠️</div>
+                    <h3>Infraestructura y Montaje</h3>
+                    <ul>
+                        <li>Racks de pie y murales</li>
+                        <li>Bandejas porta cables y canaletas</li>
+                        <li>Gabinetes climatizados</li>
+                        <li>Soportes y accesorios de montaje</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">💻</div>
+                    <h3>Software y Seguridad</h3>
+                    <ul>
+                        <li>Plataformas de automatización (Ansible, Puppet)</li>
+                        <li>Monitorización de redes (SolarWinds NCM)</li>
+                        <li>Antivirus corporativos (Bitdefender, Malwarebytes)</li>
+                        <li>Sistemas EDR con IA (CylancePROTECT)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="products-grid" style="margin-top:2rem;">
+                <div class="product-card">
+                    <div class="product-icon">🧰</div>
+                    <h3>Herramientas Profesionales</h3>
+                    <ul>
+                        <li>Crimpadoras y pelacables de precisión</li>
+                        <li>Probadores de red y certificadores</li>
+                        <li>Herramientas de impacto y punch down</li>
+                        <li>Guías pasa cables y accesorios</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🔒</div>
+                    <h3>Seguridad Física y Lógica</h3>
+                    <ul>
+                        <li>Firewalls de hardware</li>
+                        <li>Controladores de acceso y filtrado MAC</li>
+                        <li>Routers con control parental avanzado</li>
+                        <li>Soluciones WPS y autenticación robusta</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">📶</div>
+                    <h3>Conectividad Inalámbrica</h3>
+                    <ul>
+                        <li>Repetidores Wi-Fi TP-Link 300 Mbps</li>
+                        <li>Sistemas Wi-Fi mesh para grandes espacios</li>
+                        <li>Adaptadores USB Wi-Fi doble banda</li>
+                        <li>Antenas direccionales y omnidireccionales</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">⚙️</div>
+                    <h3>Servicios Complementarios</h3>
+                    <ul>
+                        <li>Licencias de software y mantenimiento</li>
+                        <li>Consultoría para selección de equipamiento</li>
+                        <li>Capacitaciones técnicas in company</li>
+                        <li>Planes de soporte y garantías extendidas</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cta-panel">
+                <h3>¿Necesitás un equipamiento a medida?</h3>
+                <p>Trabajamos con las principales marcas del mercado y diseñamos kits personalizados según las necesidades de tu red.</p>
+                <a href="contactos.html" class="btn-primary">Solicitar asesoramiento</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-links">
+        <div class="container">
+            <h2>Continúa explorando</h2>
+            <div class="page-link-grid">
+                <a class="page-link" href="inicio.html">Inicio <span>Punto de partida del proyecto</span></a>
+                <a class="page-link" href="servicios.html">Servicios <span>Implementaciones profesionales</span></a>
+                <a class="page-link" href="informacion-tecnica.html">Información Técnica <span>Teoría y fundamentos</span></a>
+                <a class="page-link" href="contactos.html">Contactos <span>Solicitá presupuesto</span></a>
+                <a class="page-link" href="quienes-somos.html">Quiénes Somos <span>Conocé al equipo</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Redes II. Todos los derechos reservados.</p>
+            <p>Soluciones profesionales en redes informáticas</p>
+        </div>
+    </footer>
+</body>
+</html>

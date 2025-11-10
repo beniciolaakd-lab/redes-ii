@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes II - Información Técnica</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--primary-color:#2563eb;--secondary-color:#1e40af;--accent-color:#3b82f6;--text-color:#1f2937;--text-light:#6b7280;--bg-color:#fff;--bg-light:#f9fafb;--bg-dark:#111827;--border-color:#e5e7eb;--shadow:0 4px 6px -1px rgba(0,0,0,0.1)}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.7;color:var(--text-color);background-color:var(--bg-light)}
+        .container{max-width:1100px;margin:0 auto;padding:0 20px}
+        .navbar{background-color:#fff;box-shadow:var(--shadow);padding:1rem 0;position:sticky;top:0;z-index:1000}
+        .navbar .container{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+        .logo h2{color:var(--primary-color);font-size:1.8rem}
+        .nav-menu{display:flex;list-style:none;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+        .nav-link{text-decoration:none;color:var(--text-color);font-weight:500;transition:color .3s ease;position:relative}
+        .nav-link:hover{color:var(--primary-color)}
+        .page-header{padding:70px 0;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;text-align:center}
+        .page-header h1{font-size:3rem;margin-bottom:1rem}
+        .page-header p{max-width:760px;margin:0 auto;opacity:.9;font-size:1.05rem}
+        .section-content{background-color:#fff;margin:50px 0;padding:2.5rem;border-radius:14px;box-shadow:var(--shadow);border-left:5px solid var(--primary-color)}
+        .section-content h2{color:var(--primary-color);font-size:1.8rem;margin-bottom:1rem}
+        .section-content h3{color:var(--secondary-color);margin-top:1.8rem;margin-bottom:.8rem;font-size:1.25rem}
+        .section-content p{color:var(--text-light);margin-bottom:1rem}
+        .section-content ul,.section-content ol{margin:1rem 0 1rem 1.5rem;color:var(--text-light)}
+        .section-content li{margin-bottom:.5rem}
+        .highlight-box{background-color:var(--bg-light);border-radius:10px;padding:1.5rem;margin:1.5rem 0;border-left:4px solid var(--accent-color)}
+        .two-column{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin:1.5rem 0}
+        .item-card{background-color:var(--bg-light);padding:1.5rem;border-radius:10px;border-left:4px solid var(--accent-color);box-shadow:var(--shadow)}
+        .item-card h4{color:var(--secondary-color);margin-bottom:.7rem}
+        code{background-color:#eef2ff;padding:2px 6px;border-radius:4px;font-family:'Courier New',monospace;font-size:.9rem;color:var(--secondary-color)}
+        .page-links{background-color:#fff;margin:60px 0;padding:3rem;border-radius:14px;box-shadow:var(--shadow)}
+        .page-links h2{text-align:center;color:var(--text-color);font-size:2.2rem;margin-bottom:2.5rem}
+        .page-link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+        .page-link{display:block;text-decoration:none;background-color:var(--bg-light);padding:1.4rem;border-radius:10px;box-shadow:var(--shadow);border:1px solid var(--border-color);color:var(--text-color);font-weight:600;text-align:center;transition:transform .3s ease,box-shadow .3s ease}
+        .page-link span{display:block;font-size:.9rem;color:var(--text-light);font-weight:400;margin-top:.4rem}
+        .page-link:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);color:var(--primary-color)}
+        .footer{background-color:var(--bg-dark);color:#fff;text-align:center;padding:2rem 0;margin-top:4rem}
+        .footer p{margin:.5rem 0;opacity:.9}
+        @media(max-width:768px){.page-header{padding:50px 0}.page-header h1{font-size:2.2rem}}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><h2>Redes II</h2></div>
+            <ul class="nav-menu">
+                <li><a href="inicio.html" class="nav-link">Inicio</a></li>
+                <li><a href="productos.html" class="nav-link">Productos</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="informacion-tecnica.html" class="nav-link">Información Técnica</a></li>
+                <li><a href="contactos.html" class="nav-link">Contactos</a></li>
+                <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Información Técnica Esencial</h1>
+            <p>Resumen detallado de los fundamentos de redes, protocolos, componentes físicos y herramientas de gestión desarrollados a lo largo de los trabajos prácticos.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section-content" id="comunicacion">
+            <h2>1. Comunicación entre Computadoras y Protocolo TCP/IP</h2>
+            <h3>Concepto de Comunicación entre Computadoras</h3>
+            <p>La comunicación entre computadoras es el proceso mediante el cual dos o más dispositivos intercambian información de manera estructurada a través de una red, utilizando medios físicos y un conjunto de protocolos.</p>
+            <h3>Objetivos de los Equipos en Red</h3>
+            <ul>
+                <li><strong>Compartir recursos:</strong> archivos, impresoras y dispositivos.</li>
+                <li><strong>Intercambio ágil de información:</strong> comunicación efectiva entre áreas.</li>
+                <li><strong>Colaboración en tiempo real:</strong> trabajo simultáneo sin importar la ubicación.</li>
+                <li><strong>Centralización de servicios:</strong> facilita la administración y el mantenimiento.</li>
+                <li><strong>Optimización de costos:</strong> evita duplicar infraestructura.</li>
+            </ul>
+            <div class="two-column">
+                <div class="item-card">
+                    <h4>Ventajas</h4>
+                    <ul>
+                        <li>Eliminación de barreras geográficas.</li>
+                        <li>Mayor eficiencia y productividad.</li>
+                        <li>Acceso remoto a información y recursos.</li>
+                        <li>Respaldo y archivado centralizado.</li>
+                        <li>Gestión integral de la información.</li>
+                    </ul>
+                </div>
+                <div class="item-card">
+                    <h4>Desventajas</h4>
+                    <ul>
+                        <li>Riesgo de ciberataques y pérdida de privacidad.</li>
+                        <li>Brecha digital entre usuarios.</li>
+                        <li>Difusión de información falsa o sin validar.</li>
+                        <li>Problemas sociales: ciberacoso, adicciones.</li>
+                        <li>Dependencia de la infraestructura.</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Importancia del Protocolo TCP/IP</h3>
+            <p>TCP/IP actúa como un idioma universal que permite la interoperabilidad entre dispositivos heterogéneos en Internet y redes privadas. Se organiza en cuatro capas:</p>
+            <div class="two-column">
+                <div class="item-card">
+                    <h4>Capa de Acceso</h4>
+                    <p>Manejo de las conexiones físicas (cables, Wi-Fi, routers) para transportar datos dentro de la red local.</p>
+                </div>
+                <div class="item-card">
+                    <h4>Capa de Internet</h4>
+                    <p>Encamina paquetes leyendo las direcciones IP y eligiendo la mejor ruta disponible.</p>
+                </div>
+                <div class="item-card">
+                    <h4>Capa de Transporte</h4>
+                    <p>Garantiza que los datos lleguen completos y en orden, retransmitiendo si se detectan pérdidas.</p>
+                </div>
+                <div class="item-card">
+                    <h4>Capa de Aplicación</h4>
+                    <p>Expone servicios de alto nivel (HTTP, SMTP, FTP) a los usuarios y aplicaciones.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-content" id="topologias">
+            <h2>2. Arquitecturas y Topologías de Red</h2>
+            <p>Las topologías determinan la forma de conexión de los dispositivos y el medio utilizado.</p>
+            <div class="two-column">
+                <div class="item-card">
+                    <h4>Bus</h4>
+                    <p><strong>Medio:</strong> cable coaxial o UTP.<br>Simple y económico, pero sensible a fallos en el cable principal.</p>
+                </div>
+                <div class="item-card">
+                    <h4>Estrella</h4>
+                    <p><strong>Medio:</strong> UTP o fibra.<br>Control centralizado mediante un switch. Fácil de administrar, depende del nodo central.</p>
+                </div>
+                <div class="item-card">
+                    <h4>Anillo</h4>
+                    <p><strong>Medio:</strong> fibra o UTP.<br>La información viaja en un circuito cerrado. Buen aprovechamiento del ancho de banda, difícil de ampliar.</p>
+                </div>
+                <div class="item-card">
+                    <h4>Malla</h4>
+                    <p><strong>Medio:</strong> UTP, fibra, enlaces inalámbricos.<br>Alta tolerancia a fallos por rutas redundantes, costo elevado y configuración compleja.</p>
+                </div>
+                <div class="item-card">
+                    <h4>Árbol</h4>
+                    <p><strong>Medio:</strong> UTP, fibra.<br>Estructura jerárquica escalable. Depende del nodo raíz para mantener la comunicación.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-content" id="switch-hub">
+            <h2>3. Switch vs Hub</h2>
+            <div class="highlight-box">
+                <p><strong>Hub:</strong> dispositivo pasivo que replica la señal a todos los puertos, generando colisiones y limitando la eficiencia.</p>
+                <p><strong>Switch:</strong> dispositivo inteligente que reenvía tramas únicamente al puerto destino utilizando direcciones MAC.</p>
+            </div>
+            <h3>Tipos de Switch</h3>
+            <ul>
+                <li><strong>Capa 2:</strong> conmutación basada en MAC.</li>
+                <li><strong>Capa 3:</strong> agrega funciones de enrutamiento.</li>
+                <li><strong>Gestionado:</strong> permite configuración avanzada y monitoreo.</li>
+                <li><strong>No gestionado:</strong> funcionamiento plug & play sin ajustes.</li>
+            </ul>
+        </section>
+
+        <section class="section-content" id="cables">
+            <h2>4. Cableado de Red: Recto y Cruzado</h2>
+            <h3>Cable Recto (Straight Through)</h3>
+            <p>Se utiliza para conectar dispositivos de distinto tipo (PC a switch, PC a router). Ambos extremos usan la misma norma.</p>
+            <ul>
+                <li><strong>T568A:</strong> Blanco/Verde, Verde, Blanco/Naranja, Azul, Blanco/Azul, Naranja, Blanco/Marrón, Marrón.</li>
+                <li><strong>T568B:</strong> Blanco/Naranja, Naranja, Blanco/Verde, Azul, Blanco/Azul, Verde, Blanco/Marrón, Marrón.</li>
+            </ul>
+            <h3>Cable Cruzado (Crossover)</h3>
+            <p>Une dispositivos del mismo tipo (PC-PC, switch-switch). Se cruzan los pares naranja y verde utilizando T568A en un extremo y T568B en el otro.</p>
+        </section>
+
+        <section class="section-content" id="adaptadores">
+            <h2>5. Adaptadores de Red</h2>
+            <div class="two-column">
+                <div class="item-card">
+                    <h4>Ethernet</h4>
+                    <p>Conexión cableada estable. Velocidades de 10 Mbps a 100 Gbps. Ideal para oficinas y servidores.</p>
+                </div>
+                <div class="item-card">
+                    <h4>Wi-Fi</h4>
+                    <p>Conectividad inalámbrica con estándares 802.11 a/b/g/n/ac/ax. Adaptadores doble banda 2.4 y 5 GHz.</p>
+                </div>
+                <div class="item-card">
+                    <h4>Bluetooth</h4>
+                    <p>Enlaces personales de corto alcance para periféricos y dispositivos IoT.</p>
+                </div>
+            </div>
+            <p>En Windows se pueden gestionar con la configuración avanzada o mediante PowerShell, por ejemplo, usando <code>Get-NetAdapter</code>.</p>
+        </section>
+
+        <section class="section-content" id="errores">
+            <h2>6. Detección y Corrección de Errores</h2>
+            <p>Los errores pueden generarse por ruido, interferencias o fallos físicos. Se aplican los siguientes mecanismos:</p>
+            <ul>
+                <li><strong>Bits de paridad:</strong> añaden un bit extra para detectar errores simples.</li>
+                <li><strong>Redundancia:</strong> envía información adicional para detectar o corregir fallos (ej. RAID).</li>
+                <li><strong>Errores en ráfaga:</strong> afectan secuencias de bits continuos por interferencias temporales.</li>
+            </ul>
+            <h3>Errores más comunes</h3>
+            <ul>
+                <li>Configuraciones incorrectas.</li>
+                <li>Conflictos de direcciones IP.</li>
+                <li>Falta de redundancia en la infraestructura.</li>
+                <li>Problemas físicos en cables y conectores.</li>
+                <li>Interferencias y señal inalámbrica débil.</li>
+            </ul>
+            <h3>Diagnóstico inicial</h3>
+            <ol>
+                <li>Verificar direcciones IP y puertas de enlace.</li>
+                <li>Comprobar cables, conectores y adaptadores.</li>
+                <li>Revisar controladores y firmware.</li>
+                <li>Analizar políticas de seguridad y configuraciones globales.</li>
+            </ol>
+        </section>
+
+        <section class="section-content" id="tipos-redes">
+            <h2>7. Tipos de Redes</h2>
+            <div class="two-column">
+                <div class="item-card">
+                    <h4>LAN</h4>
+                    <p>Área local (hogares, oficinas). Utiliza UTP y Wi-Fi.</p>
+                </div>
+                <div class="item-card">
+                    <h4>MAN</h4>
+                    <p>Área metropolitana (sedes corporativas, campus). Tecnologías Metro Ethernet, WiMAX.</p>
+                </div>
+                <div class="item-card">
+                    <h4>WAN</h4>
+                    <p>Cobertura amplia o global (Internet, redes bancarias). Medios: fibra, satélites, enlaces dedicados.</p>
+                </div>
+                <div class="item-card">
+                    <h4>WLAN</h4>
+                    <p>Versión inalámbrica de las LAN. Usada en hogares, cafeterías, hoteles.</p>
+                </div>
+                <div class="item-card">
+                    <h4>PAN</h4>
+                    <p>Red personal de corto alcance (Bluetooth, Wi-Fi Direct) entre dispositivos individuales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-content" id="router">
+            <h2>8. Router: Características y Configuración</h2>
+            <p>Dispositivo esencial que conecta varias redes y gestiona el tráfico de datos. Integra funciones de módem, punto de acceso y conmutador.</p>
+            <div class="highlight-box">
+                <h3>Aspectos clave</h3>
+                <ul>
+                    <li><strong>Velocidad y bandas:</strong> routers doble/triple banda (2.4, 5 y 6 GHz) con MU-MIMO.</li>
+                    <li><strong>Accesibilidad:</strong> acceso web mediante IP (192.168.0.1/1.1) con credenciales del equipo.</li>
+                    <li><strong>Señal:</strong> ubicación centrada, elevada y sin interferencias.</li>
+                    <li><strong>Seguridad:</strong> WPA2/WPA3, contraseñas robustas y cifrado.</li>
+                    <li><strong>WPS:</strong> incorporación rápida de dispositivos mediante botón o PIN.</li>
+                    <li><strong>Filtrado MAC:</strong> permite o bloquea dispositivos según su dirección física.</li>
+                    <li><strong>Control parental:</strong> limita horarios y sitios para equipos específicos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-content" id="repetidores">
+            <h2>9. Repetidores Wi-Fi</h2>
+            <p>Extienden la cobertura de la red inalámbrica hacia zonas con baja señal.</p>
+            <ul>
+                <li>Modelos TP-Link 300 Mbps operan en 2.4 GHz, con opción de doble banda.</li>
+                <li>Alcance típico: 20-30 metros en interiores.</li>
+                <li>Instalación mediante WPS o acceso a la interfaz web.</li>
+                <li>Antenas ajustables para direccionar la señal.</li>
+            </ul>
+        </section>
+
+        <section class="section-content" id="cableado">
+            <h2>10. Cableado Estructurado</h2>
+            <p>Sistema organizado que integra voz, datos y video bajo normas internacionales.</p>
+            <div class="two-column">
+                <div class="item-card">
+                    <h4>Componentes</h4>
+                    <ul>
+                        <li>Racks y paneles de parcheo.</li>
+                        <li>Cables UTP, fibra óptica y coaxial.</li>
+                        <li>Tomas, conectores RJ45/RJ11.</li>
+                        <li>Bandejas, caños y cable canal.</li>
+                    </ul>
+                </div>
+                <div class="item-card">
+                    <h4>Cableado Horizontal</h4>
+                    <p>Une el área de trabajo con el cuarto de telecomunicaciones. Longitud máxima estándar: 100 m.</p>
+                    <ul>
+                        <li>Patch cords.</li>
+                        <li>Puntos de red.</li>
+                        <li>Canalizaciones y guías.</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Tendido Independiente</h3>
+            <p>Consiste en separar físicamente los servicios (voz, datos, video) para evitar interferencias y facilitar el mantenimiento.</p>
+            <h3>Herramientas Clave</h3>
+            <ul>
+                <li>Crimpadoras, pelacables y herramientas de impacto.</li>
+                <li>Probadores de red y certificadores.</li>
+                <li>Taladros, destornilladores y guías pasacables.</li>
+            </ul>
+        </section>
+    </main>
+
+    <section class="page-links">
+        <div class="container">
+            <h2>¿Qué más querés ver?</h2>
+            <div class="page-link-grid">
+                <a class="page-link" href="inicio.html">Inicio <span>Resumen y bienvenida</span></a>
+                <a class="page-link" href="productos.html">Productos <span>Componentes destacados</span></a>
+                <a class="page-link" href="servicios.html">Servicios <span>Implementaciones profesionales</span></a>
+                <a class="page-link" href="contactos.html">Contactos <span>Consultanos tus dudas</span></a>
+                <a class="page-link" href="quienes-somos.html">Quiénes Somos <span>El equipo detrás del proyecto</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Redes II. Todos los derechos reservados.</p>
+            <p>Soluciones profesionales en redes informáticas</p>
+        </div>
+    </footer>
+</body>
+</html>

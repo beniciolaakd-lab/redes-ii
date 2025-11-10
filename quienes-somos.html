@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes II - Quiénes Somos</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--primary-color:#2563eb;--secondary-color:#1e40af;--accent-color:#3b82f6;--text-color:#1f2937;--text-light:#6b7280;--bg-color:#fff;--bg-light:#f9fafb;--bg-dark:#111827;--border-color:#e5e7eb;--shadow:0 4px 6px -1px rgba(0,0,0,0.1);--shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1)}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.7;color:var(--text-color);background-color:var(--bg-light)}
+        .container{max-width:1100px;margin:0 auto;padding:0 20px}
+        .navbar{background-color:#fff;box-shadow:var(--shadow);padding:1rem 0;position:sticky;top:0;z-index:1000}
+        .navbar .container{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+        .logo h2{color:var(--primary-color);font-size:1.8rem}
+        .nav-menu{display:flex;list-style:none;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+        .nav-link{text-decoration:none;color:var(--text-color);font-weight:500;transition:color .3s ease;position:relative}
+        .nav-link:hover{color:var(--primary-color)}
+        .page-header{padding:70px 0;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;text-align:center}
+        .page-header h1{font-size:3rem;margin-bottom:1rem}
+        .page-header p{max-width:720px;margin:0 auto;opacity:.9;font-size:1.05rem}
+        .about-section{margin:60px 0;background-color:#fff;padding:3rem;border-radius:14px;box-shadow:var(--shadow)}
+        .about-section h2{color:var(--primary-color);font-size:2rem;margin-bottom:1rem}
+        .about-section p{color:var(--text-light);margin-bottom:1.2rem}
+        .team{margin-top:2.5rem}
+        .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+        .team-card{background-color:var(--bg-light);border-left:5px solid var(--primary-color);padding:1.8rem;border-radius:12px;box-shadow:var(--shadow)}
+        .team-card h3{color:var(--primary-color);margin-bottom:.5rem}
+        .team-card p{color:var(--text-light)}
+        .knowledge{margin:60px 0;background-color:#fff;padding:3rem;border-radius:14px;box-shadow:var(--shadow)}
+        .knowledge h2{color:var(--primary-color);margin-bottom:1.5rem}
+        .knowledge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.8rem}
+        .knowledge-card{background-color:var(--bg-light);border-radius:12px;padding:1.8rem;border-left:4px solid var(--accent-color);box-shadow:var(--shadow)}
+        .knowledge-card h3{color:var(--secondary-color);margin-bottom:.7rem}
+        .knowledge-card ul{list-style:disc;margin-left:1.2rem;color:var(--text-light)}
+        .values{margin:60px 0;background-color:#fff;padding:3rem;border-radius:14px;box-shadow:var(--shadow)}
+        .values h2{color:var(--primary-color);margin-bottom:1.5rem;text-align:center}
+        .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.8rem}
+        .value-card{background-color:var(--bg-light);padding:1.8rem;border-radius:12px;box-shadow:var(--shadow)}
+        .value-card h3{color:var(--secondary-color);margin-bottom:.7rem}
+        .value-card p{color:var(--text-light)}
+        .page-links{margin:60px 0;background-color:#fff;padding:3rem;border-radius:14px;box-shadow:var(--shadow)}
+        .page-links h2{text-align:center;color:var(--text-color);font-size:2.2rem;margin-bottom:2.5rem}
+        .page-link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+        .page-link{display:block;text-decoration:none;background-color:var(--bg-light);padding:1.4rem;border-radius:10px;box-shadow:var(--shadow);border:1px solid var(--border-color);color:var(--text-color);font-weight:600;text-align:center;transition:transform .3s ease,box-shadow .3s ease}
+        .page-link span{display:block;font-size:.9rem;color:var(--text-light);font-weight:400;margin-top:.4rem}
+        .page-link:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);color:var(--primary-color)}
+        .footer{background-color:var(--bg-dark);color:#fff;text-align:center;padding:2rem 0;margin-top:4rem}
+        .footer p{margin:.5rem 0;opacity:.9}
+        @media(max-width:768px){.page-header{padding:50px 0}.page-header h1{font-size:2.2rem}}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><h2>Redes II</h2></div>
+            <ul class="nav-menu">
+                <li><a href="inicio.html" class="nav-link">Inicio</a></li>
+                <li><a href="productos.html" class="nav-link">Productos</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="informacion-tecnica.html" class="nav-link">Información Técnica</a></li>
+                <li><a href="contactos.html" class="nav-link">Contactos</a></li>
+                <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Quiénes somos</h1>
+            <p>Somos un equipo apasionado por las redes informáticas, enfocado en brindar soluciones confiables, seguras y escalables para cada proyecto.</p>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>Nuestra historia</h2>
+            <p>Redes II nace como una iniciativa de estudiantes avanzados que transformaron su experiencia académica en proyectos reales para empresas, instituciones educativas y hogares conectados. Cada trabajo práctico se convirtió en un módulo de conocimiento aplicado.</p>
+            <p>Integramos conocimientos en protocolos, topologías, cableado estructurado, seguridad informática y gestión de redes, siempre con foco en la mejora continua y en la adopción de estándares internacionales.</p>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <h2 style="color:var(--primary-color);margin-bottom:1.5rem">Nuestro equipo</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <h3>Tomás Beck</h3>
+                    <p>Especialista en cableado estructurado, planificación de infraestructura física y certificación de enlaces. Apasionado por la documentación técnica.</p>
+                </div>
+                <div class="team-card">
+                    <h3>Tomás Carrasco</h3>
+                    <p>Responsable de protocolos y seguridad. Diseña políticas de acceso, firewall y controles parentales para redes empresariales y educativas.</p>
+                </div>
+                <div class="team-card">
+                    <h3>Benicio Fernández</h3>
+                    <p>Encargado de automatización y monitoreo. Implementa soluciones con Ansible, Puppet y SolarWinds para asegurar redes siempre operativas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="knowledge">
+        <div class="container">
+            <h2>Áreas de conocimiento</h2>
+            <div class="knowledge-grid">
+                <div class="knowledge-card">
+                    <h3>Protocolos y modelos</h3>
+                    <ul>
+                        <li>TCP/IP y sus cuatro capas</li>
+                        <li>Modelo OSI y ataques por capa</li>
+                        <li>Servicios DHCP, DNS y WPS</li>
+                    </ul>
+                </div>
+                <div class="knowledge-card">
+                    <h3>Arquitecturas y topologías</h3>
+                    <ul>
+                        <li>Bus, estrella, anillo, malla y árbol</li>
+                        <li>Planes de medios (UTP, coaxial, fibra)</li>
+                        <li>Diseño de redes LAN, MAN, WAN</li>
+                    </ul>
+                </div>
+                <div class="knowledge-card">
+                    <h3>Seguridad informática</h3>
+                    <ul>
+                        <li>Control de accesos y filtrado MAC</li>
+                        <li>Programas antivirus y EDR</li>
+                        <li>Control parental y políticas Wi-Fi</li>
+                    </ul>
+                </div>
+                <div class="knowledge-card">
+                    <h3>Gestión y automatización</h3>
+                    <ul>
+                        <li>Herramientas Ansible, Puppet, SolarWinds</li>
+                        <li>Monitoreo proactivo y respuesta rápida</li>
+                        <li>Documentación y mantenimiento preventivo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values">
+        <div class="container">
+            <h2>Nuestros valores</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Trabajo en equipo</h3>
+                    <p>Coordinamos cada proyecto integrando los conocimientos de todos los integrantes y asegurando resultados consistentes.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Enfoque práctico</h3>
+                    <p>Llevamos los conceptos teóricos a soluciones reales, replicables y sustentables en el tiempo.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Innovación constante</h3>
+                    <p>Investigamos nuevas tecnologías y las aplicamos en prototipos para evaluar su impacto antes de implementarlas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-links">
+        <div class="container">
+            <h2>Visitá nuestras secciones</h2>
+            <div class="page-link-grid">
+                <a class="page-link" href="inicio.html">Inicio <span>Resumen de la propuesta</span></a>
+                <a class="page-link" href="productos.html">Productos <span>Catálogo completo</span></a>
+                <a class="page-link" href="servicios.html">Servicios <span>Soluciones implementadas</span></a>
+                <a class="page-link" href="informacion-tecnica.html">Información Técnica <span>Contenido académico</span></a>
+                <a class="page-link" href="contactos.html">Contactos <span>Escribinos ahora</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Redes II. Todos los derechos reservados.</p>
+            <p>Soluciones profesionales en redes informáticas</p>
+        </div>
+    </footer>
+</body>
+</html>
